@@ -35,6 +35,10 @@
       cursor: pointer;
       user-select: none;
 
+      &.selected {
+        color: $navLinkHover;
+      }
+
       &:hover {
         color: $navLinkHover;
         transition: color 150ms linear;

@@ -1,0 +1,80 @@
+@import "colors";
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+  color: $headline;
+  small {
+    font-size: 0.5em;
+  }
+}
+
+.responsive-table {
+  li {
+    border-radius: 12px;
+    padding: 25px 30px;
+    display: flex;
+    margin-bottom: 5px;
+    gap: 30px;
+  }
+  .table-header {
+    background-color: $headline;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $white;
+
+    .col-1 {
+      padding-left: 20px;
+    }
+    .col-2 {
+      padding-left: 70px;
+    }
+    .col-3 {
+      padding-left: 100px;
+    }
+    .col-4 {
+      padding-left: 135px;
+    }
+  }
+  .table-row {
+    background-color: $white;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+  }
+  
+  @media all and (max-width: 1000px) {
+    .table-header {
+      display: none;
+    }
+    li {
+      display: block;
+    }
+    .col {
+      
+      flex-basis: 100%;
+      
+    }
+    .col {
+      display: flex;
+      padding: 10px 0;
+      justify-content: flex-start;
+
+      &:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        width: 120px;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

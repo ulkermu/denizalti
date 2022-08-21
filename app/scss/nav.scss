@@ -26,6 +26,12 @@
         text-decoration: none;
         color: $navLink;
         transition: color 150ms linear;
+        user-select: none;
+
+        &.selected {
+          color: $navLinkHover;
+          cursor: pointer;
+        }
 
         &:hover {
           color: $navLinkHover;
