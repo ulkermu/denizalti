@@ -1,0 +1,112 @@
+@import "colors";
+
+.contact {
+  background-color: $white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  align-self: center;
+
+  .contact-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+
+    .contact-form {
+      max-width: 300px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .form-label {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+
+        input {
+          padding: 10px 15px;
+          border-radius: 12px;
+          outline: none;
+          border: none;
+          background: $boardGreenBg;
+        }
+
+        textarea {
+          resize: none;
+          padding: 10px 15px;
+          height: 183px;
+          border-radius: 20px;
+          outline: none;
+          border: none;
+          background: $boardGreenBg;
+          -ms-overflow-style: none; /* IE and Edge */
+          scrollbar-width: none; /* Firefox */
+
+          &::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+          }
+        }
+      }
+    }
+
+    .contact-info-wrapper {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      padding: 20px;
+      gap: 20px;
+
+      .contact-info {
+        background-color: $boardGreenBg;
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .contact {
+    .contact-wrapper {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .contact-form {
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-info-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .contact {
+    .contact-wrapper {
+      .contact-info-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .contact {
+    .contact-wrapper {
+      .contact-info-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
