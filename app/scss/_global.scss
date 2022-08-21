@@ -29,14 +29,14 @@ body {
   gap: 40px;
 }
 
-.gallery-body {
+.body {
   padding-top: 200px;
   transition: padding-top 150ms linear;
-  background: rgb(38, 155, 201);
+  background: $primaryColor;
 
   footer {
     img {
-      background-color: #269bc9 !important;
+      background-color: $primaryColor !important;
     }
   }
 }
@@ -47,7 +47,7 @@ body {
     transition: padding 150ms linear;
   }
 
-  .gallery-body {
+  .body {
     padding-top: 60px;
     transition: padding-top 150ms linear;
   }
