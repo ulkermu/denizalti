@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <!-- General meta tags needed-->
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <!-- Needed for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- If you want custom browser colors on mobile -->
+  <meta name="theme-color" content="#1843c1" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="#1843c1">
+  <link rel="icon" href="./img/3.svg">
+
+  <title>Ataşehir DenizAltı International Anaokulu</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+  <!-- CSS File -->
+  <link rel="stylesheet" href="dist/style.css?cb=1661075711786">
+</head>
+
+<body class="body">
+
+  <header class="header">
+    <nav class="nav-wrapper">
+      <div class="nav-container">
+        <a href="#" class="nav-links">Biz Kimiz</a>
+        <a href="#" class="nav-links">Neler Yapıyoruz</a>
+        <a href="#" class="nav-links">Sınıflarımız</a>
+      </div>
+      <a href="./index.html" class="nav-logo">
+        <img src="./img/logo.svg" alt="Logo">
+      </a>
+      <div class="nav-container">
+        <a href="#" class="nav-links">Beslenme</a>
+        <a href="#" class="nav-links">Duyurular</a>
+        <a href="./gallery.html" class="nav-links">Galeri</a>
+        <a href="#" class="nav-links">İletişim</a>
+      </div>
+    </nav>
+    <nav class="nav-mobil-wrapper">
+      <div class="nav-bar-burger">
+        <div class="nav-bar-burger-inc-1"></div>
+        <div class="nav-bar-burger-inc-2"></div>
+        <div class="nav-bar-burger-inc-3"></div>
+      </div>
+
+      <div class="mobil-menu">
+        <div class="menu-overlay">
+          <div class="nav-bar-mobil">
+            <ul class="nav-bar-links-mobil">
+              <li><a href="./index.html">Ana Sayfa</a></li>
+              <li><a href="#">Biz Kimiz</a></li>
+              <li><a href="#">Neler Yapıyoruz</a></li>
+              <li><a href="#">Sınıflarımız</a></li>
+              <li><a href="#">Beslenme</a></li>
+              <li><a href="#">Duyurular</a></li>
+              <li><a href="./gallery.html">Galeri</a></li>
+              <li><a class="selected" href="#">İletişim</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content">
+      <div class="contact">
+        <div class="contact-wrapper">
+          <form class="contact-form">
+            <div class="form-label">
+              <label for=""></label>
+              <input type="text">
+            </div>
+            <div class="form-label">
+              <label for=""></label>
+              <input type="email" name="" id="">
+            </div>
+            <div class="form-label">
+              <label for=""></label>
+              <textarea name="" id=""></textarea>
+            </div>
+          </form>
+          <div class="contact-info-wrapper">
+            <div class="contact-info">
+              <span class="contact-info-headline"></span>
+              <span class="contact-info-text"></span>
+            </div>
+            <div class="contact-info">
+              <span class="contact-info-headline"></span>
+              <span class="contact-info-text"></span>
+            </div>
+            <div class="contact-info">
+              <span class="contact-info-headline"></span>
+              <span class="contact-info-text"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <img class="footer-img" src="./img/footer.svg" alt="Footer Image">
+    <div class="footer-info">
+      <div class="info-address">
+        <p>Atatürk Mahallesi</p>
+        <p>Mustafa Kemal Caddesi No:15</p>
+        <p>Ataşehir / İSTANBUL</p>
+      </div>
+      <div class="info-number">
+        <p>+90 216 456 62 89</p>
+        <p>+90 552 250 62 89</p>
+        <p>info@denizaltianaokulu.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript File -->
+  <script src="dist/all.js?cb=1661075711786"></script>
+  <script>
+    const galleryPhotos = document.querySelector('.gallery-photos');
+    const photoTrip = galleryPhotos.querySelectorAll('.photos-trip');
+    const photoActivity = galleryPhotos.querySelectorAll('.photos-activity');
+    const photoRedLetterDay = galleryPhotos.querySelectorAll('.photos-red-letter-day');
+
+    function galleryAllFilter() {
+      photoTrip.forEach(n => n.classList.remove('close'));
+      photoActivity.forEach(n => n.classList.remove('close'));
+      photoRedLetterDay.forEach(n => n.classList.remove('close'));
+    }
+
+    function galleryTripFilter() {
+      photoTrip.forEach(n => n.classList.remove('close'));
+      photoActivity.forEach(n => n.classList.add('close'));
+      photoRedLetterDay.forEach(n => n.classList.add('close'));
+    }
+
+    function galleryActivityFilter() {
+      photoTrip.forEach(n => n.classList.add('close'));
+      photoActivity.forEach(n => n.classList.remove('close'));
+      photoRedLetterDay.forEach(n => n.classList.add('close'));
+    }
+
+    function galleryRedLetterDayFilter() {
+      photoTrip.forEach(n => n.classList.add('close'));
+      photoActivity.forEach(n => n.classList.add('close'));
+      photoRedLetterDay.forEach(n => n.classList.remove('close'));
+    }
+  </script>
+</body>
+
+</html>
