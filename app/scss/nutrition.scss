@@ -8,9 +8,9 @@
   padding-right: 10px;
 }
 
-h2 {
+.nutrition-headline {
   font-size: 26px;
-  margin: 20px 0;
+  padding: 20px 0;
   text-align: center;
   color: $headline;
   small {
@@ -52,6 +52,12 @@ h2 {
   }
   
   @media all and (max-width: 1000px) {
+
+      li {
+        padding: 15px 10px;
+        gap: 20px;
+      }
+
     .table-header {
       display: none;
     }
@@ -70,9 +76,9 @@ h2 {
 
       &:before {
         color: #6C7A89;
-        padding-right: 10px;
         content: attr(data-label);
         width: 120px;
+        min-width: 120px;
         justify-content: flex-start;
       }
     }

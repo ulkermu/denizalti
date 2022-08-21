@@ -5,9 +5,17 @@
   gap: 20px;
   transition: all 150ms linear;
 
+  .classes-headline {
+    width: 100%;
+    padding: 10px;
+    background-color: $navLinkHover;
+    color: $white;
+    border-radius: 15px;
+  }
+
   .classes-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     transition: gap 150ms linear;
 
@@ -32,16 +40,32 @@
         span {
           width: 120px;
           text-align: center;
-          background-color: $primaryColor;
+          background-color: $navLink;
           padding: 5px;
           border-radius: 10px;
+          color: $white;
         }
       }
 
-      p {
-        color: $black;
-        width: fit-content;
+      .age-text {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        color: $menuOverlay;
+
+        p {
+          padding-top: 10px;
+          color: $black;
+        }
       }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .classes {
+    .classes-wrapper {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 }
