@@ -19,29 +19,54 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
 
   <!-- CSS File -->
-  <link rel="stylesheet" href="dist/style.css?cb=1661120401689">
+  <link rel="stylesheet" href="dist/style.css?cb=1661713402437">
 </head>
 
 <body class="body">
 
   <header class="header">
-    <nav class="nav-wrapper">
-      <div class="nav-container">
-        <a href="./whoAreWe.html" class="nav-links">Biz Kimiz</a>
-        <a href="./whatAreWeDoing.html" class="nav-links">Neler Yapıyoruz</a>
-        <a href="./classes.html" class="nav-links">Sınıflarımız</a>
-      </div>
+    <nav id="navigation">
+      <ul class="links">
+        <li><a href="./index.html">Anasayfa</a></li>
+        <li class="dropdown"><a class="trigger-drop">Denizaltında Yaşam Sınıflarımız<i class="arrow"></i></a>
+          <ul class="drop">
+            <li><a href="./class-second.html">2 Yaş Sınıfımız (Koala)</a></li>
+            <li><a href="./class-third.html">3 Yaş Sınıfımız (Arı)</a></li>
+            <li><a href="./class-fourth.html">4 Yaş Sınıfımız (Bilgili Baykuş)</a></li>
+            <li><a href="./class-fifth.html">5 Yaş Sınıfımız (Dalgıç Maymun)</a></li>
+          </ul>
+        </li>
+        <li class="dropdown"><a class="trigger-drop">Biz Kimiz<i class="arrow"></i></a>
+          <ul class="drop">
+            <li><a href="#">Hikayemiz</a></li>
+            <li><a href="#">Değerlerimiz</a></li>
+            <li><a href="#">Vizyonumuz</a></li>
+            <li><a href="#">Misyonumuz</a></li>
+          </ul>
+        </li>
+      </ul>
       <a href="./index.html" class="nav-logo">
         <img src="./img/logo.svg" alt="Logo">
       </a>
-      <div class="nav-container">
-        <a href="./nutrition.html" class="nav-links">Beslenme</a>
-        <a href="./announcement.html" class="nav-links">Duyurular</a>
-        <a href="./gallery.html" class="nav-links">Galeri</a>
-        <a class="nav-links selected">İletişim</a>
-      </div>
+      <ul class="links">
+        <li><a href="#">Merak Ettikleriniz</a></li>
+        <li class="dropdown"><a class="trigger-drop">Aile Kulübümüz<i class="arrow"></i></a>
+          <ul class="drop">
+            <li><a href="#">İşbirliklerimiz</a></li>
+            <li><a href="#">Shopping</a></li>
+            <li><a href="#">Eğitim Planlama</a></li>
+            <li><a href="#">Psikolog</a></li>
+          </ul>
+        </li>
+        <li><a>İletişim</a></li>
+      </ul>
     </nav>
+
     <nav class="nav-mobil-wrapper">
+      <a href="./index.html" class="nav-mobil-logo">
+        <img src="./img/mini-logo.png" alt="">
+      </a>
+
       <div class="nav-bar-burger">
         <div class="nav-bar-burger-inc-1"></div>
         <div class="nav-bar-burger-inc-2"></div>
@@ -50,18 +75,39 @@
 
       <div class="mobil-menu">
         <div class="menu-overlay">
-          <div class="nav-bar-mobil">
-            <ul class="nav-bar-links-mobil">
-              <li><a href="./index.html">Ana Sayfa</a></li>
-              <li><a href="./whoAreWe.html">Biz Kimiz</a></li>
-              <li><a href="./whatAreWeDoing.html">Neler Yapıyoruz</a></li>
-              <li><a href="./classes.html">Sınıflarımız</a></li>
-              <li><a href="./nutrition.html">Beslenme</a></li>
-              <li><a href="./announcement.html">Duyurular</a></li>
-              <li><a href="./gallery.html">Galeri</a></li>
-              <li><a class="selected">İletişim</a></li>
+          <nav id="navigation_mobil">
+            <ul class="links">
+              <li><a href="./index.html">Anasayfa</a></li>
+              <li class="dropdown"><a class="trigger-drop">Denizaltında Yaşam Sınıflarımız<i class="arrow"></i></a>
+                <ul class="drop">
+                  <li><a href="./class-second.html">2 Yaş Sınıfımız (Koala)</a></li>
+                  <li><a href="./class-third.html">3 Yaş Sınıfımız (Arı)</a></li>
+                  <li><a href="./class-fourth.html">4 Yaş Sınıfımız (Bilgili Baykuş)</a></li>
+                  <li><a href="./class-fifth.html">5 Yaş Sınıfımız (Dalgıç Maymun)</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a class="trigger-drop">Biz Kimiz<i class="arrow"></i></a>
+                <ul class="drop">
+                  <li><a href="#">Hikayemiz</a></li>
+                  <li><a href="#">Değerlerimiz</a></li>
+                  <li><a href="#">Vizyonumuz</a></li>
+                  <li><a href="#">Misyonumuz</a></li>
+                </ul>
+              </li>
             </ul>
-          </div>
+            <ul class="links">
+              <li><a href="#">Merak Ettikleriniz</a></li>
+              <li class="dropdown"><a class="trigger-drop">Aile Kulübümüz<i class="arrow"></i></a>
+                <ul class="drop">
+                  <li><a href="#">İşbirliklerimiz</a></li>
+                  <li><a href="#">Shopping</a></li>
+                  <li><a href="#">Eğitim Planlama</a></li>
+                  <li><a href="#">Psikolog</a></li>
+                </ul>
+              </li>
+              <li><a>İletişim</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </nav>
@@ -124,7 +170,7 @@
   </footer>
 
   <!-- JavaScript File -->
-  <script src="dist/all.js?cb=1661120401689"></script>
+  <script src="dist/all.js?cb=1661713402437"></script>
 </body>
 
 </html>

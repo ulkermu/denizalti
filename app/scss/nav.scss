@@ -8,53 +8,147 @@
   position: absolute;
   top: 20px;
 
-  .nav-wrapper {
-    display: flex;
-    justify-content: space-around;
-    width: fit-content;
-    gap: 320px;
-    padding: 12px 40px;
-    background-color: $white;
-    border-radius: 15px;
+  #navigation {
     position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 50px;
+    background: $white;
+    border-radius: 9999px;
+    z-index: 1000;
+    min-width: 580px;
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
 
-    .nav-container {
-      display: flex;
-      gap: 40px;
-
-      .nav-links {
-        text-decoration: none;
-        color: $navLink;
-        transition: color 150ms linear;
-        user-select: none;
-
-        &.selected {
-          color: $navLinkHover;
-          cursor: pointer;
-        }
-
-        &:hover {
-          color: $navLinkHover;
-          transition: color 150ms linear;
-        }
-      }
+    a,
+    a:hover {
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
     }
 
     .nav-logo {
-      width: 280px;
+      left: 527px;
       position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      top: -110px;
+      top: -90px;
 
       img {
-        width: 100%;
+        width: 230px;
+        height: 230px;
+      }
+    }
+
+    .links {
+      float: right;
+      position: relative;
+
+      li {
+        list-style: none;
+        position: relative;
+        margin: 10px;
+        display: inline-block;
+
+        .trigger-drop {
+          cursor: pointer;
+        }
+
+        & > a {
+          position: relative;
+          display: inline-block;
+          padding: 0 10px;
+          line-height: 30px;
+          height: 30px;
+          color: $primaryColor;
+          cursor: pointer;
+
+          &:hover {
+            color: $white;
+            background: $primaryColor;
+            border-radius: 7px;
+          }
+
+          &[class^="trigger-"] {
+            padding-right: 40px;
+          }
+
+          .arrow {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 35%;
+            text-align: center;
+            right: 10px;
+            border-width: 5px 5px 0 5px;
+            border-style: solid;
+            border-color: rgba(#000, 0.3) transparent;
+
+            &:after {
+              content: "";
+              border-left: 1px solid rgba(#000, 0.15);
+              top: -10px;
+              left: -15px;
+              position: absolute;
+              height: 15px;
+            }
+          }
+        }
+
+        ul {
+          position: absolute;
+          left: 0;
+          margin: 0;
+          background: $white;
+          border-radius: 2px;
+          box-shadow: 0 0 5px rgba(#000, 0.15);
+          display: none;
+          border-radius: 12px;
+
+          > li {
+            clear: both;
+            list-style: none;
+            display: block;
+            padding: 5px 10px;
+            margin: 0;
+            width: 100%;
+
+            &:first-child {
+              border-top-left-radius: 12px;
+              border-top-right-radius: 12px;
+            }
+
+            &:last-child {
+              border-bottom-left-radius: 12px;
+              border-bottom-right-radius: 12px;
+            }
+
+            &:hover {
+              background: $primaryColor;
+              > a {
+                background: $primaryColor;
+                color: $white;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          > .drop {
+            display: block;
+            animation: fadeInRight 0.3s ease;
+            -webkit-animation: fadeInRight 0.3s ease;
+          }
+        }
       }
     }
   }
 
   .nav-mobil-wrapper {
+    .nav-mobil-logo {
+      display: none;
+    }
+
     .nav-bar-burger {
       display: none;
       align-self: center;
@@ -97,42 +191,135 @@
         justify-content: center;
         align-items: center;
 
-        .nav-bar-mobil {
-          width: 100%;
+        #navigation_mobil {
+          position: relative;
+          left: 0;
+          right: 0;
+          top: 0;
+          height: 50px;
+          background: $white;
+          border-radius: 9999px;
+          z-index: 1000;
+          min-width: 580px;
+          display: flex;
+          justify-content: space-between;
+          gap: 200px;
 
-          .nav-bar-links-mobil {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            height: 72vh;
-            padding: 71px 0 0 0;
+          a,
+          a:hover {
+            text-decoration: none;
+            font-weight: 600;
+          }
+
+          .nav-logo {
+            left: 527px;
+            position: absolute;
+            top: -90px;
+
+            img {
+              width: 230px;
+              height: 230px;
+            }
+          }
+
+          .links {
+            float: right;
+            position: relative;
 
             li {
-              list-style-type: none;
-              display: flex;
-              justify-content: flex-start;
-              padding: 15px 0;
-              border-bottom: 1px solid rgba(240, 220, 108, 0.455);
-              width: 100%;
+              list-style: none;
+              position: relative;
+              margin: 10px;
+              display: inline-block;
 
-              .selected {
-                color: $navLinkHover;
+              .trigger-drop {
+                cursor: pointer;
               }
 
-              a {
-                text-decoration: none;
-                font-size: 30px;
-                line-height: 38px;
-                letter-spacing: -0.183908px;
-                font-weight: 500;
-                font-style: normal;
-                color: $navLink;
-                margin-left: 36px;
+              & > a {
+                position: relative;
+                display: inline-block;
+                padding: 0 10px;
+                line-height: 30px;
+                height: 30px;
+                color: $primaryColor;
+
+                &:hover {
+                  color: $white;
+                  background: $primaryColor;
+                  border-radius: 7px;
+                }
+
+                &[class^="trigger-"] {
+                  padding-right: 40px;
+                }
+
+                .arrow {
+                  position: absolute;
+                  width: 10px;
+                  height: 10px;
+                  top: 35%;
+                  text-align: center;
+                  right: 10px;
+                  border-width: 5px 5px 0 5px;
+                  border-style: solid;
+                  border-color: rgba(#000, 0.3) transparent;
+
+                  &:after {
+                    content: "";
+                    border-left: 1px solid rgba(#000, 0.15);
+                    top: -10px;
+                    left: -15px;
+                    position: absolute;
+                    height: 15px;
+                  }
+                }
               }
 
-              a:hover {
-                transition: all 150ms ease-out;
-                color: $navLinkHover;
+              ul {
+                position: absolute;
+                left: 0;
+                margin: 0;
+                background: $white;
+                border-radius: 2px;
+                box-shadow: 0 0 5px rgba(#000, 0.15);
+                display: none;
+                border-radius: 12px;
+
+                > li {
+                  clear: both;
+                  list-style: none;
+                  display: block;
+                  padding: 5px 10px;
+                  margin: 0;
+                  width: 100%;
+
+                  &:first-child {
+                    border-top-left-radius: 12px;
+                    border-top-right-radius: 12px;
+                  }
+
+                  &:last-child {
+                    border-bottom-left-radius: 12px;
+                    border-bottom-right-radius: 12px;
+                  }
+
+                  &:hover {
+                    background: $primaryColor;
+                    > a {
+                      background: $primaryColor;
+                      color: $white;
+                    }
+                  }
+                }
+              }
+
+              &:hover {
+                > .drop {
+                  display: block;
+                  animation: fadeInRight 0.3s ease;
+                  -webkit-animation: fadeInRight 0.3s ease;
+                }
               }
             }
           }
@@ -147,23 +334,37 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .header {
     width: 100%;
     background-color: transparent;
     transition: background-color 150ms linear;
     z-index: 9999;
     top: 0;
-    .nav-wrapper {
+
+    #navigation {
       display: none;
     }
 
     .nav-mobil-wrapper {
+      .nav-mobil-logo {
+        display: block;
+        position: absolute;
+        left: 30px;
+        top: 11.35px;
+        z-index: 9500;
+
+        img {
+          width: 80px;
+          height: 80px;
+        }
+      }
+
       .nav-bar-burger {
         display: block;
         position: absolute;
         right: 30px;
-        top: 31.35px;
+        top: 40px;
         z-index: 9500;
 
         &:focus {
@@ -196,15 +397,39 @@
         width: 100%;
 
         .menu-overlay {
-          .nav-bar-mobil {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            justify-content: space-between;
-            padding: 30px 0;
+          #navigation_mobil {
+            display: grid;
+            gap: 0;
+            justify-content: flex-start;
+            position: absolute;
+            top: 100px;
+            left: 30px;
+
+            .links {
+              display: grid;
+
+              .dropdown {
+                .drop {
+                  border-radius: 15px;
+                  border: 1px solid $primaryColor;
+                  z-index: 20;
+                }
+              }
+            }
           }
         }
       }
     }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
   }
 }
