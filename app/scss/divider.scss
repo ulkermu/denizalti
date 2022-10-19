@@ -1,0 +1,57 @@
+@import "colors";
+
+.divider {
+  position: relative;
+  display: flex;
+  background-color: $dividerBg;
+  padding: 20px;
+  justify-content: center;
+  border-radius: 15px;
+  transition: all 150ms linear;
+
+  .divider-grass {
+    position: absolute;
+    width: 70px;
+    left: 50px;
+    top: -5px;
+    transition: all 150ms linear;
+  }
+
+  p {
+    max-width: 320px;
+    transition: all 150ms linear;
+  }
+
+  .divider-star {
+    position: absolute;
+    width: 100px;
+    right: 35px;
+    top: -20px;
+    transition: all 150ms linear;
+  }
+}
+
+@media (max-width: 600px) {
+  .divider {
+    .divider-grass {
+      position: absolute;
+      width: 70px;
+      left: 10px;
+      top: 15px;
+      transition: all 150ms linear;
+    }
+
+    p {
+      max-width: 100px;
+      transition: all 150ms linear;
+    }
+
+    .divider-star {
+      position: absolute;
+      width: 100px;
+      right: 0px;
+      top: 0px;
+      transition: all 150ms linear;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "colors";
+
+.slider {
+  padding-top: 200px;
+  height: fit-content;
+  background-color: #97d3ba;
+  transition: all 150ms linear;
+
+  .kindergarted-slider {
+
+    img {
+      max-height: 100%;
+      width: fit-content;
+      height: fit-content;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .slider {
+    padding-top: 20px;
+    transition: all 150ms linear;
+
+    .kindergarted-slider {
+      padding-top: 75px;
+    }
+  }
+}
