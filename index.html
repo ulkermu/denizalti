@@ -1,468 +1,52 @@
 <!DOCTYPE html>
 <html lang="en-US">
+    <head>
+        <!-- General meta tags needed-->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <!-- Needed for responsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- If you want custom browser colors on mobile -->
+        <meta name="theme-color" content="#1843c1" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="#1843c1">
 
-<head>
-  <!-- General meta tags needed-->
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <!-- Needed for responsive design -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- If you want custom browser colors on mobile -->
-  <meta name="theme-color" content="#1843c1" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="#1843c1">
-  <link rel="icon" href="./img/3.svg">
+        <title></title>
 
-  <title>Ataşehir DenizAltı International Anaokulu</title>
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
+        
+        <!-- CSS File -->
+        <link rel="stylesheet" href="dist/style.css?cb=1659521401773">
+    </head>
+    <body>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <main>
+            <section class="content">
+                <h1>Front-end Boilerplate</h1>
+                <h2>Using Sass and Gulp</h2>
 
-  <!-- CSS File -->
-  <link rel="stylesheet" href="dist/style.css?cb=1661713402437">
-</head>
+                <p>
+                    Here's a quick set-up guide:
+                </p>
 
-<body>
-
-  <header class="header">
-    <nav id="navigation">
-      <ul class="links">
-        <li><a href="#">Anasayfa</a></li>
-        <li class="dropdown"><a class="trigger-drop">Denizaltında Yaşam Sınıflarımız<i class="arrow"></i></a>
-          <ul class="drop">
-            <li><a href="./class-second.html">2 Yaş Sınıfımız (Koala)</a></li>
-            <li><a href="./class-third.html">3 Yaş Sınıfımız (Arı)</a></li>
-            <li><a href="./class-fourth.html">4 Yaş Sınıfımız (Bilgili Baykuş)</a></li>
-            <li><a href="./class-fifth.html">5 Yaş Sınıfımız (Dalgıç Maymun)</a></li>
-          </ul>
-        </li>
-        <li class="dropdown"><a class="trigger-drop">Biz Kimiz<i class="arrow"></i></a>
-          <ul class="drop">
-            <li><a href="#">Hikayemiz</a></li>
-            <li><a href="#">Değerlerimiz</a></li>
-            <li><a href="#">Vizyonumuz</a></li>
-            <li><a href="#">Misyonumuz</a></li>
-          </ul>
-        </li>
-      </ul>
-      <a class="nav-logo">
-        <img src="./img/logo.svg" alt="Logo">
-      </a>
-      <ul class="links">
-        <li><a href="#">Merak Ettikleriniz</a></li>
-        <li class="dropdown"><a class="trigger-drop">Aile Kulübümüz<i class="arrow"></i></a>
-          <ul class="drop">
-            <li><a href="#">İşbirliklerimiz</a></li>
-            <li><a href="#">Shopping</a></li>
-            <li><a href="#">Eğitim Planlama</a></li>
-            <li><a href="#">Psikolog</a></li>
-          </ul>
-        </li>
-        <li><a href="./contact.html">İletişim</a></li>
-      </ul>
-    </nav>
-
-    <nav class="nav-mobil-wrapper">
-      <a class="nav-mobil-logo">
-        <img src="./img/mini-logo.png" alt="">
-      </a>
-
-      <div class="nav-bar-burger">
-        <div class="nav-bar-burger-inc-1"></div>
-        <div class="nav-bar-burger-inc-2"></div>
-        <div class="nav-bar-burger-inc-3"></div>
-      </div>
-
-      <div class="mobil-menu">
-        <div class="menu-overlay">
-          <nav id="navigation_mobil">
-            <ul class="links">
-              <li><a href="#">Anasayfa</a></li>
-              <li class="dropdown"><a class="trigger-drop">Denizaltında Yaşam Sınıflarımız<i class="arrow"></i></a>
-                <ul class="drop">
-                  <li><a href="./class-second.html">2 Yaş Sınıfımız (Koala)</a></li>
-                  <li><a href="./class-third.html">3 Yaş Sınıfımız (Arı)</a></li>
-                  <li><a href="./class-fourth.html">4 Yaş Sınıfımız (Bilgili Baykuş)</a></li>
-                  <li><a href="./class-fifth.html">5 Yaş Sınıfımız (Dalgıç Maymun)</a></li>
+                <ul>
+                    <li>Clone Git repo</li>
+                    <li>Install by running "npm install" on the commmand line</li>
+                    <li>Run "gulp" on the command line.</li>
                 </ul>
-              </li>
-              <li class="dropdown"><a class="trigger-drop">Biz Kimiz<i class="arrow"></i></a>
-                <ul class="drop">
-                  <li><a href="#">Hikayemiz</a></li>
-                  <li><a href="#">Değerlerimiz</a></li>
-                  <li><a href="#">Vizyonumuz</a></li>
-                  <li><a href="#">Misyonumuz</a></li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="links">
-              <li><a href="#">Merak Ettikleriniz</a></li>
-              <li class="dropdown"><a class="trigger-drop">Aile Kulübümüz<i class="arrow"></i></a>
-                <ul class="drop">
-                  <li><a href="#">İşbirliklerimiz</a></li>
-                  <li><a href="#">Shopping</a></li>
-                  <li><a href="#">Eğitim Planlama</a></li>
-                  <li><a href="#">Psikolog</a></li>
-                </ul>
-              </li>
-              <li><a href="./contact.html">İletişim</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </nav>
-  </header>
 
-  <main id="main">
-    <div class="slider">
-      <div class="kindergarted-slider">
-        <img src="./img/slider_1.svg" alt="Slider">
-      </div>
-    </div>
-    <div class="content">
-      <div class="activities">
-        <h2>Submarine Kids</h2>
-        <div class="activities-boards">
-          <div class="activities-board">
-            <div class="board-logo">
-              <img src="./img/2.svg" alt="">
-              <span>Özel Servis</span>
-            </div>
-            <p>
-              Minik yolcularımızı hergün özenle maceramıza dahil ediyoruz. Servis içi personeli olan, güvenli ve takip
-              edilebilir sistemimiz ile minikler bize emanet.
-            </p>
-          </div>
-          <div class="activities-board">
-            <div class="board-logo">
-              <img src="./img/4.svg" alt="">
-              <span>Sınıflarımız</span>
-            </div>
-            <p>
-              2-5 yaşa uygun tasarlanmış sınıflarımızda minikleri farklı maceralar bekliyor.
-            </p>
-          </div>
-          <div class="activities-board">
-            <div class="board-logo">
-              <img src="./img/3.svg" alt="">
-              <span>Etkinlikler</span>
-            </div>
-            <p>
-              Bazen okulumuzda, bazen bir müzede, bazen de bir fabrikada olabiliriz. Her ay farklı rotalar çiziyoruz.
-              Etkinlikerimiz için bizi takipte kalın.
-            </p>
-          </div>
-          <div class="activities-board">
-            <div class="board-logo">
-              <img src="./img/1.svg" alt="">
-              <span>Ögretmenlerimiz</span>
-            </div>
-            <p>
-              Maceramızda bizlerle ilerleyecek öğretmenlerimiz en önemli yol arkadaşlarımızdır.
-            </p>
-          </div>
-          <div class="activities-board">
-            <div class="board-logo">
-              <img src="./img/5.svg" alt="">
-              <span>Branş Dersleri</span>
-            </div>
-            <p>
-              Denizaltımızda o kadar çok seçenek bulunuyor ki, hangisini paylaşalım bilemedik.
-            </p>
-          </div>
-          <div class="activities-board">
-            <div class="board-logo">
-              <img src="./img/6.svg" alt="">
-              <span>Beslenme</span>
-            </div>
-            <p>
-              Uzman diyetisyenler tarafından hazırlanan günlük yemek listemiz, usta aşçılarımız tarafından leziz
-              yemeklere dönüştürülüyor.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="divider">
-        <img class="divider-grass" src="./img/grass.svg" alt="">
-        <p>
-          ‘Small school that makes a BIG difference.’
-        </p>
-        <img class="divider-star" src="./img/star.svg" alt="">
-      </div>
-      <div class="workshops">
-        <h2>Workshops (Atölyeler)</h2>
-        <div class="workshops-boards">
-          <div class="workshops-board">
-            <div class="workshops-board-container">
-              <div class="workshops-board-front-face">
-                <h4>Kolaj ve Boya Atölyeleri</h4>
-                <img src="./img/classes/1.jpg" alt="">
-              </div>
-              <div class="workshops-board-back-face">
-                <h4>Kolaj ve Boya Atölyeleri</h4>
-                <p>Bir takım Açıklamalar</p>
-              </div>
-            </div>
-          </div>
-          <div class="workshops-board">
-            <div class="workshops-board-container">
-              <div class="workshops-board-front-face">
-                <h4>Tasarım Atölyeleri</h4>
-                <img src="./img/classes/1.jpg" alt="">
-              </div>
-              <div class="workshops-board-back-face">
-                <h4>Tasarım Atölyeleri</h4>
-                <p>Bir takım Açıklamalar</p>
-              </div>
-            </div>
-          </div>
-          <div class="workshops-board">
-            <div class="workshops-board-container">
-              <div class="workshops-board-front-face">
-                <h4>Sosyal Beceri Atölyeleri</h4>
-                <img src="./img/classes/1.jpg" alt="">
-              </div>
-              <div class="workshops-board-back-face">
-                <h4>Sosyal Beceri Atölyeleri</h4>
-                <p>Bir takım Açıklamalar</p>
-              </div>
-            </div>
-          </div>
-          <div class="workshops-board">
-            <div class="workshops-board-container">
-              <div class="workshops-board-front-face">
-                <h4>Mutfak Sanatları Atölyeleri</h4>
-                <img src="./img/classes/1.jpg" alt="">
-              </div>
-              <div class="workshops-board-back-face">
-                <h4>Mutfak Sanatları Atölyeleri</h4>
-                <p>Bir takım Açıklamalar</p>
-              </div>
-            </div>
-          </div>
-          <div class="workshops-board">
-            <div class="workshops-board-container">
-              <div class="workshops-board-front-face">
-                <h4>Akıl ve Zeka Atölyeleri</h4>
-                <img src="./img/classes/1.jpg" alt="">
-              </div>
-              <div class="workshops-board-back-face">
-                <h4>Akıl ve Zeka Atölyeleri</h4>
-                <p>Bir takım Açıklamalar</p>
-              </div>
-            </div>
-          </div>
-          <div class="workshops-board">
-            <div class="workshops-board-container">
-              <div class="workshops-board-front-face">
-                <h4>Baskı Atölyeleri</h4>
-                <img src="./img/classes/1.jpg" alt="">
-              </div>
-              <div class="workshops-board-back-face">
-                <h4>Baskı Atölyeleri</h4>
-                <p>Bir takım Açıklamalar</p>
-              </div>
-            </div>
-          </div>
-          <div class="workshops-board">
-            <div class="workshops-board-container">
-              <div class="workshops-board-front-face">
-                <h4>Görsel Sanatlar Atölyeleri</h4>
-                <img src="./img/classes/1.jpg" alt="">
-              </div>
-              <div class="workshops-board-back-face">
-                <h4>Görsel Sanatlar Atölyeleri</h4>
-                <p>Bir takım Açıklamalar</p>
-              </div>
-            </div>
-          </div>
-          <div class="workshops-board">
-            <div class="workshops-board-container">
-              <div class="workshops-board-front-face">
-                <h4>Oyun Atölyeleri</h4>
-                <img src="./img/classes/1.jpg" alt="">
-              </div>
-              <div class="workshops-board-back-face">
-                <h4>Oyun Atölyeleri</h4>
-                <p>Bir takım Açıklamalar</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="education">
-        <img src="./img/classmates_bags-min.jpeg" alt="Görsel">
-        <div class="education-text">
-          <h4>Hakkımızda veya Eğitim Yaklaşımımız</h4>
-          <p>
-            Mini bir hakkımızda yazısı veya eğitim yaklaşımımız yazısı gelecek. Ne olacağına karar verildiğinde ise yazı
-            eklenecek. Placeholder gibi düşünebilirsiniz.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero expedita fugiat magnam atque soluta voluptates
-            veniam, a, quas nihil incidunt quae ducimus quia officia. Magni cum obcaecati esse voluptatibus pariatur
-            nemo architecto at ea, illum, ad earum numquam assumenda nostrum. Labore illo natus sit nobis ducimus vero
-            quaerat, totam amet?
-          </p>
-        </div>
-      </div>
-      <div class="branch">
-        <h2>Branş Derslerimiz</h2>
-        <div class="branch-lesson">
-          <div id="chess" class="branch-lessons">
-            <img src="./img/lesson_chess-min.jpeg" alt="">
-            <span>Satranç</span>
-          </div>
-          <div id="music" class="branch-lessons">
-            <img src="./img/lesson_piano-min.jpeg" alt="">
-            <span>Müzik</span>
-          </div>
-          <div id="drama" class="branch-lessons">
-            <img src="./img/lesson_drama-min.jpeg" alt="">
-            <span>Drama</span>
-          </div>
-          <div id="skill" class="branch-lessons">
-            <img src="./img/lesson_skills-min.jpeg" alt="">
-            <span>Beceri ve Koordinasyon & Jimnastik</span>
-          </div>
-          <div id="english" class="branch-lessons">
-            <img src="./img/lesson_english-min.jpeg" alt="">
-            <span>İngilizce</span>
-          </div>
-        </div>
-      </div>
-      <div class="gallery">
-        <h2 class="gallery-headline">Galeri</h2>
-        <div class="gallery-links">
-          <div id="all-link" onclick="galleryAllFilter()" class="gallery-link selected">Tümü</div>
-          <div id="trip-link" onclick="galleryTripFilter()" class="gallery-link">Geziler</div>
-          <div id="activity-link" onclick="galleryActivityFilter()" class="gallery-link">Etkinlikler</div>
-          <div id="red-day-link" onclick="galleryRedLetterDayFilter()" class="gallery-link">Önemli Günler</div>
-        </div>
-        <div class="gallery-photos">
-          <img class="photos photos-trip" src="./img/picsum/1.jpg" alt="">
-          <img class="photos photos-trip" src="./img/picsum/2.jpg" alt="">
-          <img class="photos photos-trip" src="./img/picsum/3.jpg" alt="">
-          <img class="photos photos-activity" src="./img/picsum/4.jpg" alt="">
-          <img class="photos photos-activity" src="./img/picsum/5.jpg" alt="">
-          <img class="photos photos-activity" src="./img/picsum/6.jpg" alt="">
-          <img class="photos photos-activity" src="./img/picsum/7.jpg" alt="">
-          <img class="photos photos-red-letter-day" src="./img/picsum/8.jpg" alt="">
-          <img class="photos photos-red-letter-day" src="./img/picsum/9.jpg" alt="">
-          <img class="photos photos-red-letter-day" src="./img/picsum/10.jpg" alt="">
-          <img class="photos photos-red-letter-day" src="./img/picsum/11.jpg" alt="">
-          <img class="photos photos-activity" src="./img/picsum/12.jpg" alt="">
-        </div>
-      </div>
-      <div class="parents">
-        <h2>Ailelerimiz Neler Söylemiş</h2>
-        <div class="parents-boards">
-          <div class="parents-board">
-            <div class="board-logo">
-              <img src="./img/frame.svg" alt="">
-              <span>Mehmet Bey</span>
-            </div>
-            <p>
-              Maceramızda bizlerle ilerleyecek öğretmenlerimiz en önemli yol arkadaşlarımız.
-            </p>
-          </div>
-          <div class="parents-board">
-            <div class="board-logo">
-              <img src="./img/frame.svg" alt="">
-              <span>Damla Hanım</span>
-            </div>
-            <p>
-              Denizaltımızda o kadar çok seçenek bulunuyor ki hangisini paylaşalım bilemedik.
-            </p>
-          </div>
-          <div class="parents-board">
-            <div class="board-logo">
-              <img src="./img/frame.svg" alt="">
-              <span>Tolga Bey</span>
-            </div>
-            <p>
-              Uzman diyetisyenler tarafından hazırlanan günlük yemek listemiz, usta aşçımız tarafından leziz yemeklere
-              dönüştürülüyor.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
+            </section>
+            
+            <aside>
+                <h3>Project Info</h3>
+                <p>
+                    This is a starter front-end project which will compile SCSS and JS files using Gulp 4.
+                </p>
+            </aside>
+            
+        </main>
 
-  <footer>
-    <img class="footer-img" src="./img/footer.svg" alt="Footer Image">
-    <div class="footer-info">
-      <div class="info-address">
-        <p>Atatürk Mahallesi</p>
-        <p>Mustafa Kemal Caddesi No:15</p>
-        <p>Ataşehir / İSTANBUL</p>
-      </div>
-      <div class="info-number">
-        <p>+90 216 456 62 89</p>
-        <p>+90 552 250 62 89</p>
-        <p>info@denizaltianaokulu.com</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JavaScript File -->
-  <script src="dist/all.js?cb=1661713402437"></script>
-  <script>
-    const galleryPhotos = document.querySelector('.gallery-photos');
-    const photos = document.querySelectorAll('.photos');
-    const photoTrip = galleryPhotos.querySelectorAll('.photos-trip');
-    const photoActivity = galleryPhotos.querySelectorAll('.photos-activity');
-    const photoRedLetterDay = galleryPhotos.querySelectorAll('.photos-red-letter-day');
-    const all = document.getElementById('all-link');
-    const trip = document.getElementById('trip-link');
-    const activity = document.getElementById('activity-link');
-    const redDayLetter = document.getElementById('red-day-link');
-
-    function galleryAllFilter() {
-      all.classList.add('selected');
-      trip.classList.remove('selected');
-      activity.classList.remove('selected');
-      redDayLetter.classList.remove('selected');
-
-      photoTrip.forEach(n => n.classList.remove('close'));
-      photoActivity.forEach(n => n.classList.remove('close'));
-      photoRedLetterDay.forEach(n => n.classList.remove('close'));
-    }
-
-    function galleryTripFilter() {
-      all.classList.remove('selected');
-      trip.classList.add('selected');
-      activity.classList.remove('selected');
-      redDayLetter.classList.remove('selected');
-
-      photoTrip.forEach(n => n.classList.remove('close'));
-      photoActivity.forEach(n => n.classList.add('close'));
-      photoRedLetterDay.forEach(n => n.classList.add('close'));
-    }
-
-    function galleryActivityFilter() {
-      all.classList.remove('selected');
-      trip.classList.remove('selected');
-      activity.classList.add('selected');
-      redDayLetter.classList.remove('selected');
-
-      photoTrip.forEach(n => n.classList.add('close'));
-      photoActivity.forEach(n => n.classList.remove('close'));
-      photoRedLetterDay.forEach(n => n.classList.add('close'));
-    }
-
-    function galleryRedLetterDayFilter() {
-      all.classList.remove('selected');
-      trip.classList.remove('selected');
-      activity.classList.remove('selected');
-      redDayLetter.classList.add('selected');
-
-      photoTrip.forEach(n => n.classList.add('close'));
-      photoActivity.forEach(n => n.classList.add('close'));
-      photoRedLetterDay.forEach(n => n.classList.remove('close'));
-    }
-
-  </script>
-</body>
-
+        <!-- JavaScript File -->
+        <script src="dist/all.js?cb=1659521401773"></script>
+    </body>
 </html>
